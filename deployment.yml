@@ -17,7 +17,6 @@ spec:
       containers:
       - name: django-applicatiom
         image: newimage:v1
-        imagePullPolicy: Never
         ports:
         - containerPort: 8000
         command: ["/app/venv1/bin/python"]
