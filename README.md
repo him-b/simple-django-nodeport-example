@@ -13,3 +13,6 @@ kubectl apply -f svc.yml
 
 in browser type below to see application running
 http://<workernode/minikube ip><nodeport>
+
+<img width="737" height="304" alt="image" src="https://github.com/user-attachments/assets/4a324461-9b4b-4ea3-ab00-b336e07afce7" />
+
