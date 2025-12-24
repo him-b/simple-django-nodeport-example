@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-new-deployment
+  labels:
+    app: django-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: django-app
+  template:
+    metadata:
+      labels:
+        app: django-app
+    spec:
+      containers:
+      - name: django-applicatiom
+        image: newimage:v1
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+        command: ["/app/venv1/bin/python"]
+        args: ["manage.py", "runserver", "0.0.0.0:8000"]
